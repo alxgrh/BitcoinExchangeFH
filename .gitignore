@@ -1,4 +1,6 @@
 .idea
+.project
+.pydevproject
 __pycache__/
 data/*
 dist/*
