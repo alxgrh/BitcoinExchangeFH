@@ -59,10 +59,11 @@ class PubNubApiClient(ApiSocket):
 
 
     def __start(self, channels, reconnect_interval=10):
-        while True:
-            self.pubnub.subscribe().channels(channels).execute()
-            Logger.info(self.__class__.__name__, "Socket <%s> is going to reconnect..." % self.id)
-            time.sleep(reconnect_interval)
+        self.pubnub.subscribe().channels(channels).execute()
+        #while True:
+        #    self.pubnub.subscribe().channels(channels).execute()
+        #    Logger.info(self.__class__.__name__, "Socket <%s> is going to reconnect..." % self.id)
+        #    time.sleep(reconnect_interval)
 
     def __on_message(self, pubnub, message):
         self.on_message_handler(message)
