@@ -19,5 +19,6 @@ setup(
             'qpython',
             'pyzmq',
             'tzlocal',
+            'pubnub'
         ]
     )
